@@ -2,10 +2,9 @@ import pandas as pd
 import matplotlib.pyplot as pl
 
 # read csv file as pandas dataframe
-stats = pd.read_csv( '/Users/ioannismoustakis/Desktop/other/fantasy_data/summer_league_analysis/\
-rookies_summer_league_2018_stats.csv', delimiter=';')
-print(stats.head())  # print head of the data
-print(stats.info())  # print info of the data
+stats = pd.read_csv( 'rookies_summer_league_2018_stats.csv', delimiter=';')
+#print(stats.head())  # print head of the data
+#print(stats.info())  # print info of the data
 #stats['SCORE'] = 0   # create column SCORE
 
 # create a dataframe for each position
@@ -14,8 +13,6 @@ SF_players = stats[stats['POS'] == 'SF']
 C_players = stats[stats['POS'] == 'C']
 PG_players = stats[stats['POS'] == 'PG']
 SG_players = stats[stats['POS'] == 'SG']
-print(PF_players.head())
-print(PF_players.info())
 
 # create the scoring formula for PFs
 PF_players['SCORE'] = 0.05*PF_players['GP']/PF_players['GP'].max() \
@@ -87,7 +84,7 @@ SG_players['SCORE'] = 0.05*SG_players['GP']/SG_players['GP'].max() \
 # sort the SG players based on the SCORE and pick only the best 25
 SG_players = SG_players.sort_values('SCORE', ascending=False)
 SG_players = SG_players.iloc[0:25, SG_players.columns.get_indexer(['Player', 'SCORE', 'POS', 'TEAM'])]
-print(SG_players)
+#print(SG_players)
 
 # create the scoring formula for Cs
 C_players['SCORE'] = 0.05*C_players['GP']/C_players['GP'].max() \
