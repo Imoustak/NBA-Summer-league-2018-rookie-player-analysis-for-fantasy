@@ -2,7 +2,7 @@
 
 This repository is an attempt to analyze the 2018  NBA summer league rooke player's performance for fantasy purposes.
 
-Methodology used:
+Methodology used: \n
 Using the dataset 'rookies_summer_league_2018_stats.csv' I attempt to categorize NBA rookie players based on their performance in the 2018 summer league. Players are separated according to their primary position and based on their position, they receive a score from several statistical categories. The formulas used were made to best match my league's scoring( Yahoo 9 cat leageue), at least in my opinion. Please feel free to comment or suggest modifications. 
 
 Formulas used(number % is the category's contribution to the player's score):
